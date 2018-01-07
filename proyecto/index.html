@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+<style type="text/css">
+ 
+/* CSS para la animación y localización de los DIV de cookies */
+ 
+@keyframes desaparecer
+{
+0%		{bottom: 0px;}
+80%		{bottom: 0px;}
+100%		{bottom: -50px;}
+}
+ 
+@-webkit-keyframes desaparecer /* Safari and Chrome */
+{
+0%		{bottom: 0px;}
+80%		{bottom: 0px;}
+100%		{bottom: -50px;}
+}
+ 
+@keyframes aparecer
+{
+0%		{bottom: -38px;}
+10%		{bottom: 0px;}
+90%		{bottom: 0px;}
+100%		{bottom: -38px;}
+}
+ 
+@-webkit-keyframes aparecer /* Safari and Chrome */
+{
+0%		{bottom: -38px;}
+10%		{bottom: 0px;}
+90%		{bottom: 0px;}
+100%		{bottom: -38px;}
+}
+#cookiesms1:target {
+    display: none;
+}
+.cookiesms{	
+	width:100%;
+	height:43px;
+	margin:0 auto;
+	padding-left:1%;
+        padding-top:5px;
+        font-size: 1.2em;
+	clear:both;
+        font-weight: strong;
+color: #333;
+bottom:0px;
+position:fixed;
+left: 0px;
+background-color: #FFF;
+opacity:0.7;
+filter:alpha(opacity=70); /* For IE8 and earlier */
+transition: bottom 1s;
+-webkit-transition:bottom 1s; /* Safari */
+-webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+-moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
+box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
+z-index:999999999;
+}
+ 
+.cookiesms:hover{
+bottom:0px;
+}
+.cookies2{
+background-color: #FFF;
+display:inline;
+opacity:0.95;
+filter:alpha(opacity=95);
+position:absolute; 
+left:1%; 
+top:-30px;
+font-size:15px;
+height:30px;
+padding-left:25px;
+padding-right:25px;
+-webkit-border-top-right-radius: 15px;
+-webkit-border-top-left-radius: 15px;
+-moz-border-radius-topright: 15px;
+-moz-border-radius-topleft: 15px;
+border-top-right-radius: 15px;
+border-top-left-radius: 15px;
+-webkit-box-shadow: 3px -3px 1px rgba(50, 50, 50, 0.56);
+-moz-box-shadow:    3px -3px 1px rgba(50, 50, 50, 0.56);
+box-shadow:         3px -3px 1px rgba(50, 50, 50, 0.56);
+}
+ 
+/* Fin del CSS para cookies */
+  ul#ga{
+ text-align: center;
+  }
+   p a{
+    
+    color:red!important;
+}
+  </style>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112096638-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112096638-1');
+</script>
+  
+<!-- SCRIPT CONTROL DE COOKIES -->
+<script type="text/javascript">
+function controlcookies() {
+         // si variable no existe se crea (al clicar en Aceptar)
+    localStorage.controlcookie = (localStorage.controlcookie || 0);
+ 
+    localStorage.controlcookie++; // incrementamos cuenta de la cookie
+    cookie1.style.display='none'; // Esconde la política de cookies
+}
+</script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>DG</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
+ 
+<script type="text/javascript" src="js/funciones.js">
+</script>
+<link rel="shortcut icon" href="img/favicon.jpg">
+  </head>
+
+  <body id="page-top">
+  <!--Código HTML de la política de cookies -->
+ 
+<!--La URL incluida es la parte que se ha de modificar -->
+ 
+<div class="cookiesms" id="cookie1">
+Esta web utiliza cookies, puedes ver nuestra  <a href="http://politicadecookies.com/">la política de cookies, aquí</a> 
+Si continuas navegando estás aceptándola
+<button onclick="controlcookies()">Aceptar</button>
+<div  class="cookies2" onmouseover="document.getElementById('cookie1').style.bottom = '0px';">Política de cookies + </div>
+</div>
+<script type="text/javascript">
+if (localStorage.controlcookie>0){ 
+document.getElementById('cookie1').style.bottom = '-50px';
+}
+</script>
+ 
+<!-- Fin del código de cookies --->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><p style="font-size: 20px;  ">David Gonzalez</p></a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about"><i class="fa fa-home" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#download"><i class="fa fa-cloud-download" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#cards"><i class="fa fa-cog" aria-hidden="true"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            </li>
+            
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+      <div class="intro-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h5 style=" color:#A9BCF5;margin-bottom:0px; font-size: 25px; text-align:left;"="brand-heading">Hello, im David.</h5>
+              <p style=" color:#A9BCF5;text-align:left;"class="intro-text">Web Developer
+                <br>Front end / Back end Developer </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center" >
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <h2>About Me</h2>
+            <p>Hello, my name is David, 
+            i'm a 26	
+year old.	
+I am currently doing a 450h course of web application development, taught by the teacher <a href="https://www.linkedin.com/in/carmeloescribano/" target="blank" >Carmelo Escribano</a>, where all the material is available in  
+              <a href="https://sites.google.com/site/websol018" target="blank">SOL</a>.</p>
+            <p>The objective of this course is to learn everything related to front end / back end, java and to start developing my career as a professional in this sector,
+because i only got experience at telecommunications like 3 years
+            
+            <p>
+The course includes development of the front and back end, in addition to firebase, angular and ionic.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section content-section text-center">
+      <div class="container" style="color:black;" >
+        <div class="col-lg-8 mx-auto">
+          <h2>Downloads</h2>
+          <p><h5>
+Take a look  SOL study website where new material is uploaded daily, by clicking on the following link <a href="https://sites.google.com/site/websol018" target="blank" >web soL</a></h6></p>
+        <p><h5>If you want more information about me, you can get in touch via email, also you can download my CV</h6></p>
+      <label>
+     <a href="img/cv/CV-dgp.pdf" target="blank" class="btn btn-default btn-lg">CV David</a>
+      </label>
+        </div>
+       
+      </div>
+    </section>
+<div style="margin-top:70px;" id="cards" class="card-group">
+  <div class="card">
+    <a href="https://www.javascript.com/" target="blank"><img class="card-img-top" src="img/1.jpg"alt="imagen de js"></a>	
+   
+  </div>
+  <div class="card">
+   <a href="https://www.w3schools.com/html/html5_intro.asp" target="blank"> <img class="card-img-top" src="img/2.jpg" alt="imagen html"> </a>
+  </div>
+  <div class="card">
+    <a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS3" target="blank"><img class="card-img-top" src="img/3jpg.jpg" alt="Card image cap"></a>
+ 
+  </div>
+</div>
+<div class="card-group">
+  <div class="card">
+  
+   
+    <a href="https://analytics.google.com/analytics/web/" target="blank"> <img class="card-img-top" src="img/4.jpg" alt="Card image cap"></a>
+  </div>
+  <div class="card">
+  <a href="https://github.com/" target="blank">
+    <img class="card-img-top" src="img/5.png" alt="Card image cap"></a>
+    
+
+  </div>
+  <div class="card">
+  <a href="https://getbootstrap.com/" target="blank">
+    <img class="card-img-top" src="img/6.jpg" alt="Card image cap"></a>
+    
+  </div>
+</div>
+
+
+    <!-- Contact Section -->
+    <section style="padding-top:30px; padding-bottom: 80px;"id="contact" class="content-section text-center">
+
+      <div class="container">
+       <p><h4>Contact</h4></p>
+        <div class="row">
+      
+          <div  class="col-lg-8 mx-auto">
+            <form>
+  <form>
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">First name</label>
+      <input type="text" class="form-control" id="validationDefault01" placeholder="Roberto"  required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Last name</label>
+      <input type="text" class="form-control" id="validationDefault02" placeholder="Martin" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefaultUsername">Email</label>
+      <div class="input-group">
+        
+        <input type="text" class="form-control" id="validationDefaultUsername" placeholder="mail@..." aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">City</label>
+      <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault04">State</label>
+      <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault05">Contact Number</label>
+      <input type="text" class="form-control" id="validationDefault05" placeholder="632........." required>
+    </div>
+  </div>
+  <br>
+  <button class="btn btn-primary" type="submit">Contact</button>
+</form>
+  
+  <div class="form-group row">
+    <div class="col-sm-2"></div>
+    
+  </div>
+  
+</form>
+<br><br><br><br>
+            <ul class="list-inline banner-social-buttons">
+              <li class="list-inline-item">
+                <a href="https://twitter.com" class="btn btn-default btn-lg">
+                  <i class="fa fa-twitter fa-fw"></i>
+                  <span class="network-name">Twitter</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://github.com/davidgonzalezperez" class="btn btn-default btn-lg">
+                  <i class="fa fa-github fa-fw"></i> 
+                  <span class="network-name">Github</span>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://plus.google.com/ " class="btn btn-default btn-lg">
+                  <i class="fa fa-google-plus fa-fw"></i>
+                  <span class="network-name">Google</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- Map Section -->
+    <div style="display: block;">
+    <iframe width="49%" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.6226309469707!2d-3.7059786846040526!3d40.4172099793651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e1196afdd%3A0xda1bc45aea31c957!2sPlaza+Puerta+del+Sol%2C+11%2C+28013+Madrid!5e0!3m2!1ses!2ses!4v1514405267511"  height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    <iframe width="50%" height="450" src="https://www.youtube.com/embed/nug1pMke-y4" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <div class="container text-center">
+ 
+        <p>Copyright &copy; David Gonzalez 2018</p>
+        
+      </div>
+      <div>
+      <ul id="ga" style="list-style-type:none;">
+        <li >
+            <a  href="https://www.linkedin.com/search/results/people/?firstName=David&lastName=Gonzalez+Perez&origin=SEO_SN"  target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i>
+               
+              </a>
+                          <a  href=""  target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></i>
+              </a>
+                          <a  href="" target="blank"> <i class="fa fa-facebook-official" aria-hidden="true"></i>
+              </a>
+                          <a  href="" target="blank"><i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+                          <a  href="_SN"  target="blank"><i class="fa fa-google-plus-official" aria-hidden="true"></i></i>
+              </a>
+            
+            </ul>
+            </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/grayscale.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+
+</html>
